@@ -21,4 +21,13 @@ public class YellowBird : Bird
     {
         Boost();
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        string tag = col.gameObject.tag;
+        if (tag == "Border" || tag == "Enemy" || tag == "Obstacle")
+        {
+            Destroy(col.gameObject);
+        }
+    }
 }

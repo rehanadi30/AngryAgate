@@ -10,9 +10,9 @@ public class Bird : MonoBehaviour
     public Rigidbody2D RigidBody;
     public CircleCollider2D Collider;
 
-    private BirdState _state;
+    public BirdState _state;
     private float _minVelocity = 0.05f;
-    private bool _flagDestroy = false;
+    public bool _flagDestroy = false;
 
     public UnityAction OnBirdDestroyed = delegate { };
     public UnityAction<Bird> OnBirdShot = delegate { };
